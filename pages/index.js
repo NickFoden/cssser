@@ -69,8 +69,8 @@ export default function Home() {
       <style jsx>{`
         .item_li {
           color: orange;
-          font-weight: 400;
-          text-decoration: underline;
+          font-weight: 800;
+          text-decoration: line-through;
         }
         .container {
           min-height: 100vh;
