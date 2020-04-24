@@ -1,6 +1,7 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
+  const Many = Array(10000).fill({});
   return (
     <div className="container">
       <Head>
@@ -46,6 +47,13 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <h2>Css styles</h2>
+        <ol>
+          {Many.map((item) => {
+            const random = Math.random();
+            return <li className="item_li">{random}</li>;
+          })}
+        </ol>
       </main>
 
       <footer>
@@ -59,6 +67,11 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
+        .item_li {
+          color: orange;
+          font-weight: 400;
+          text-decoration: underline;
+        }
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -200,5 +213,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
